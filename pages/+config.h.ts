@@ -4,6 +4,8 @@ import Head from "../layouts/HeadDefault";
 import logoUrl from "../assets/logo.svg";
 import vikeReact from "vike-react";
 
+import { onRenderHtml } from "../renderer/onRenderHtml";
+
 // Default config (can be overridden by pages)
 export default {
   Layout,
@@ -14,5 +16,6 @@ export default {
   description: "Demo showcasing Vike",
   // <link rel="icon" href="${favicon}" />
   favicon: logoUrl,
+  onRenderHtml,
   extends: vikeReact,
 } satisfies Config;
