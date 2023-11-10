@@ -4,6 +4,8 @@ import React from "react";
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link";
 
+import styled from "styled-components";
+
 export default function LayoutDefault({
   children,
 }: {
@@ -46,19 +48,19 @@ function Sidebar({ children }: { children: React.ReactNode }) {
   );
 }
 
+const ContentDiv = styled.div`
+  padding: 20;
+  paddingBottom: 50;
+  minHeight: 100vh;
+  background-color: red;
+`;
+
 function Content({ children }: { children: React.ReactNode }) {
   return (
     <div id="page-container">
-      <div
-        id="page-content"
-        style={{
-          padding: 20,
-          paddingBottom: 50,
-          minHeight: "100vh",
-        }}
-      >
+      <ContentDiv id="page-content">
         {children}
-      </div>
+      </ContentDiv>
     </div>
   );
 }

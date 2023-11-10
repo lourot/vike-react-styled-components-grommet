@@ -9,11 +9,15 @@ import { getPageElement } from './getPageElement.js'
 import { PageContextProvider } from './PageContextProvider.js'
 import React from 'react'
 
+import { ServerStyleSheet } from "styled-components"
+
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
+  const sheet = new ServerStyleSheet()
+
   let pageHtml = ''
   if (!!pageContext.Page) {
     const page = getPageElement(pageContext)
-    pageHtml = renderToString(page)
+    pageHtml = renderToString(sheet.collectStyles(page))
   }
 
   const title = getTitle(pageContext)
@@ -45,11 +49,14 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         ${titleTag}
         ${descriptionTag}
         ${dangerouslySkipEscape(headHtml)}
+        ${dangerouslySkipEscape(sheet.getStyleTags())}
       </head>
       <body>
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`
+
+  sheet.seal()
 
   return documentHtml
 }
