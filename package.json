@@ -26,5 +26,6 @@
     "styled-components": "^6.1.1",
     "vike": "^0.4.144",
     "vike-react": "^0.3.0"
-  }
+  },
+  "packageManager": "pnpm@8.6.12"
 }
