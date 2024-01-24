@@ -2,7 +2,7 @@ import type { Config } from "vike/types";
 import Layout from "../layouts/LayoutDefault";
 import Head from "../layouts/HeadDefault";
 import logoUrl from "../assets/logo.svg";
-import vikeReact from "vike-react";
+import vikeReact from "vike-react/config";
 
 import { onRenderHtml } from "../renderer/onRenderHtml";
 
@@ -12,8 +12,6 @@ export default {
   Head,
   // <title>
   title: "My Vike App",
-  // <meta name="description">
-  description: "Demo showcasing Vike",
   // <link rel="icon" href="${favicon}" />
   favicon: logoUrl,
   onRenderHtml,

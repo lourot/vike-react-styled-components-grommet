@@ -23,9 +23,10 @@
     "grommet": "2.35.0-alpha.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-streaming": "^0.3.19",
     "styled-components": "^6.1.1",
-    "vike": "^0.4.144",
-    "vike-react": "^0.3.0"
+    "vike": "^0.4.160",
+    "vike-react": "^0.4.4"
   },
   "packageManager": "pnpm@8.6.12"
 }

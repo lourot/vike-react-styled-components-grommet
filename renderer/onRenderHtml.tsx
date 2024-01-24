@@ -1,62 +1,84 @@
 // https://vike.dev/onRenderHtml
-export { onRenderHtml }
+export { onRenderHtml };
 
-import { renderToString } from 'react-dom/server'
-import { escapeInject, dangerouslySkipEscape } from 'vike/server'
-import type { OnRenderHtmlAsync } from 'vike/types'
-import { getTitle } from './getTitle.js'
-import { getPageElement } from './getPageElement.js'
-import { PageContextProvider } from './PageContextProvider.js'
-import React from 'react'
+import { renderToString } from "react-dom/server";
+import { renderToStream } from "react-streaming/server";
+import { escapeInject, dangerouslySkipEscape, version } from "vike/server";
+import { getHeadSetting } from "./getHeadSetting.js";
+import { getPageElement } from "./getPageElement.js";
+import { PageContextProvider } from "vike-react/usePageContext";
+import React from "react";
+import type { OnRenderHtmlAsync } from "vike/types";
 
-import { ServerStyleSheet } from "styled-components"
+import { ServerStyleSheet } from "styled-components";
 
-const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
-  const sheet = new ServerStyleSheet()
+checkVikeVersion();
 
-  let pageHtml = ''
-  if (!!pageContext.Page) {
-    const page = getPageElement(pageContext)
-    pageHtml = renderToString(sheet.collectStyles(page))
-  }
+const onRenderHtml: OnRenderHtmlAsync = async (
+  pageContext
+): ReturnType<OnRenderHtmlAsync> => {
+  const sheet = new ServerStyleSheet();
 
-  const title = getTitle(pageContext)
-  const titleTag = !title ? '' : escapeInject`<title>${title}</title>`
+  const title = getHeadSetting("title", pageContext);
+  const favicon = getHeadSetting("favicon", pageContext);
+  const lang = getHeadSetting("lang", pageContext) || "en";
 
-  const { description } = pageContext.config
-  const descriptionTag = !description ? '' : escapeInject`<meta name="description" content="${description}" />`
+  const titleTag = !title ? "" : escapeInject`<title>${title}</title>`;
+  const faviconTag = !favicon
+    ? ""
+    : escapeInject`<link rel="icon" href="${favicon}" />`;
 
-  const { favicon } = pageContext.config
-  const faviconTag = !favicon ? '' : escapeInject`<link rel="icon" href="${favicon}" />`
-
-  const Head = pageContext.config.Head || (() => <></>)
+  const Head = pageContext.config.Head || (() => <></>);
   const head = (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
         <Head />
       </PageContextProvider>
     </React.StrictMode>
-  )
-  const headHtml = renderToString(head)
+  );
 
-  const lang = pageContext.config.lang || 'en'
+  const headHtml = dangerouslySkipEscape(renderToString(head));
+
+  let pageView:
+    | string
+    | ReturnType<typeof dangerouslySkipEscape>
+    | Awaited<ReturnType<typeof renderToStream>>;
+  if (!pageContext.Page) {
+    pageView = "";
+  } else {
+    const page = sheet.collectStyles(getPageElement(pageContext));
+    pageView = !pageContext.config.stream
+      ? dangerouslySkipEscape(renderToString(page))
+      : await renderToStream(page, { userAgent: pageContext.userAgent });
+  }
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang='${lang}'>
       <head>
         <meta charset="UTF-8" />
-        ${faviconTag}
         ${titleTag}
-        ${descriptionTag}
-        ${dangerouslySkipEscape(headHtml)}
+        ${headHtml}
+        ${faviconTag}
         ${dangerouslySkipEscape(sheet.getStyleTags())}
       </head>
       <body>
-        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
+        <div id="page-view">${pageView}</div>
       </body>
-    </html>`
+    </html>`;
 
-  sheet.seal()
+  return documentHtml;
+};
 
-  return documentHtml
+function checkVikeVersion() {
+  if (version) {
+    const versionParts = version.split(".").map((s) => parseInt(s, 10)) as [
+      number,
+      number,
+      number
+    ];
+    if (versionParts[0] > 0) return;
+    if (versionParts[1] > 4) return;
+    if (versionParts[2] >= 147) return;
+  }
+  throw new Error("Update Vike to 0.4.147 or above");
 }
