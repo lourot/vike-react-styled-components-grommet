@@ -4,9 +4,15 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "========= Basics": "",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "========= Clean": "",
+    "clean": "git clean -Xdf",
+    "reset": "pnpm run clean && pnpm install && pnpm run build",
+    "========= Only allow pnpm; forbid yarn & npm": "",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
   "author": "",
