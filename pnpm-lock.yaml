@@ -31,7 +31,7 @@ dependencies:
     version: 0.4.171(react-streaming@0.3.28)(vite@5.2.11)
   vike-react:
     specifier: ^0.4.4
-    version: 0.4.9(react-dom@18.3.1)(react@18.3.1)(vike@0.4.171)(vite@5.2.11)
+    version: 0.4.10(react-dom@18.3.1)(react@18.3.1)(vike@0.4.171)(vite@5.2.11)
 
 devDependencies:
   '@types/react':
@@ -1555,8 +1555,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /vike-react@0.4.9(react-dom@18.3.1)(react@18.3.1)(vike@0.4.171)(vite@5.2.11):
-    resolution: {integrity: sha512-ohu+j+vasTSk06vcf6qo2oPvy8TeaEo9Pg5+U70duYb5c9nP+dCqKqLQN5dv2D9220ZRW5rum2CgR3usNCGjOQ==}
+  /vike-react@0.4.10(react-dom@18.3.1)(react@18.3.1)(vike@0.4.171)(vite@5.2.11):
+    resolution: {integrity: sha512-6zzt14oCO80B4NZWEKr0wj60CpSJgbGov1szuk3A56LOhWAAZ0NLNyrHZVod5ONqfxblLyi3pCLG1RHwSCkftQ==}
     peerDependencies:
       react: 18.x.x
       react-dom: 18.x.x
