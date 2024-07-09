@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@vitejs/plugin-react':
     specifier: ^4.1.1
-    version: 4.3.1(vite@5.3.2)
+    version: 4.3.1(vite@5.3.3)
   cross-fetch:
     specifier: ^4.0.0
     version: 4.0.0
   grommet:
-    specifier: 2.38.0
-    version: 2.38.0(react-dom@18.3.1)(react@18.3.1)(styled-components@6.1.11)
+    specifier: 2.39.0
+    version: 2.39.0(react-dom@18.3.1)(react@18.3.1)(styled-components@6.1.11)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -22,16 +22,16 @@ dependencies:
     version: 18.3.1(react@18.3.1)
   react-streaming:
     specifier: ^0.3.19
-    version: 0.3.33(react-dom@18.3.1)(react@18.3.1)
+    version: 0.3.41(react-dom@18.3.1)(react@18.3.1)
   styled-components:
     specifier: ^6.1.1
     version: 6.1.11(react-dom@18.3.1)(react@18.3.1)
   vike:
     specifier: ^0.4.160
-    version: 0.4.177(react-streaming@0.3.33)(vite@5.3.2)
+    version: 0.4.179(react-streaming@0.3.41)(vite@5.3.3)
   vike-react:
     specifier: ^0.4.4
-    version: 0.4.15(react-dom@18.3.1)(react@18.3.1)(vike@0.4.177)(vite@5.3.2)
+    version: 0.4.17(react-dom@18.3.1)(react@18.3.1)(vike@0.4.179)(vite@5.3.3)
 
 devDependencies:
   '@types/react':
@@ -45,10 +45,10 @@ devDependencies:
     version: 5.1.34
   typescript:
     specifier: ^5.2.2
-    version: 5.5.2
+    version: 5.5.3
   vite:
     specifier: ^5.0.0
-    version: 5.3.2
+    version: 5.3.3
 
 packages:
 
@@ -300,8 +300,8 @@ packages:
     resolution: {integrity: sha512-3I4LRHnVZXoSAsEoni5mosq9l6eiJED58d9V954W4CIZ88AUfYBanWGBGbJG3NztaRTpFHEA6wB3Hn93BmmJdg==}
     dev: false
 
-  /@brillout/vite-plugin-server-entry@0.4.6:
-    resolution: {integrity: sha512-VmnbkEVNY9pGnr2ICu+5lFnT3Zz4oblWxKZ1D4kutkzljxDOOBld8oWQI1RVup7c5OiG7XOHFJYYZS38BAXiLw==}
+  /@brillout/vite-plugin-server-entry@0.4.7:
+    resolution: {integrity: sha512-G/wHFx/JdFUA9kPSPDT0nIJH1wmgIwUIY27RL4N6EaHeaXgN4zSCBZTNvvKHyojvMxMw825m4vE0VksHXLyOng==}
     dependencies:
       '@brillout/import': 0.2.3
     dev: false
@@ -946,7 +946,7 @@ packages:
     resolution: {integrity: sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==}
     dev: false
 
-  /@vitejs/plugin-react@4.3.1(vite@5.3.2):
+  /@vitejs/plugin-react@4.3.1(vite@5.3.3):
     resolution: {integrity: sha512-m/V2syj5CuVnaxcUJOQRel/Wr31FFXRFlnOoq1TVtkCxsY5veGMTEmpWHndrhB2U8ScHtCQB1e+4hWYExQc6Lg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -957,13 +957,13 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.3.2
+      vite: 5.3.3
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /acorn@8.12.0:
-    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+  /acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: false
@@ -1208,8 +1208,8 @@ packages:
       styled-components: 6.1.11(react-dom@18.3.1)(react@18.3.1)
     dev: false
 
-  /grommet@2.38.0(react-dom@18.3.1)(react@18.3.1)(styled-components@6.1.11):
-    resolution: {integrity: sha512-AlEpfV8YI0oasRiancw2Bp1aEs535wakoYKzdlV4jitufM/EZ4ZTUj5ZQDAIUTL/fxUD11xynBY01morehFyzA==}
+  /grommet@2.39.0(react-dom@18.3.1)(react@18.3.1)(styled-components@6.1.11):
+    resolution: {integrity: sha512-PUQTTJ+RQjQ6QAVS4dJ82w54Xqct/2EDy6kYDReJBPku/KX8HUwRVY3NZfB3D2oOutS3m1E9GnbGedlJllrb2g==}
     engines: {node: '>= 16'}
     peerDependencies:
       react: ^16.6.1 || ^17.0.0 || ^18.0.0
@@ -1403,8 +1403,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-streaming@0.3.33(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-Yb6ZgYRRMM4h7nA+vmW72wHJW8OyXg1TmSj9S+mmX144tOemfzAZ51cAz7NCWvkyHwI1o8KC8rpXSuGPajQ4Cw==}
+  /react-streaming@0.3.41(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-ALLhB32V9rjU+LjIwzDBXNuUyJRmyY6sT+yCApssXt7Azm8OxOcEq8Z5qckzWtUWHM7SK2e7dvOFiVsqnGRbxw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -1562,8 +1562,8 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: false
 
-  /typescript@5.5.2:
-    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
+  /typescript@5.5.3:
+    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
@@ -1579,27 +1579,27 @@ packages:
       picocolors: 1.0.1
     dev: false
 
-  /vike-react@0.4.15(react-dom@18.3.1)(react@18.3.1)(vike@0.4.177)(vite@5.3.2):
-    resolution: {integrity: sha512-uH6NtfE0/mHimE7Rp8qYY03NX8AnlI1cDQBTX6+Lsrp7nKQu7wAZ4R1/CyS/MC2/wGq6nYcRR6zzi/1QhZl1EA==}
+  /vike-react@0.4.17(react-dom@18.3.1)(react@18.3.1)(vike@0.4.179)(vite@5.3.3):
+    resolution: {integrity: sha512-kUhJr7DmxwQy4NEK0ghDLXEqjprmai8gLut5721s57o1OUQWwq3sjiVsi1rSc2h2gN4BmZctXDjIYjPbwDIy9g==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
-      vike: '>=0.4.173'
+      vike: '>=0.4.178'
       vite: '>=4.3.8'
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-streaming: 0.3.33(react-dom@18.3.1)(react@18.3.1)
-      vike: 0.4.177(react-streaming@0.3.33)(vite@5.3.2)
-      vite: 5.3.2
+      react-streaming: 0.3.41(react-dom@18.3.1)(react@18.3.1)
+      vike: 0.4.179(react-streaming@0.3.41)(vite@5.3.3)
+      vite: 5.3.3
     dev: false
 
-  /vike@0.4.177(react-streaming@0.3.33)(vite@5.3.2):
-    resolution: {integrity: sha512-ZCyJkeNJ+ssmkoVyrET1tDsKfW+y7Is3vwzkSDeac+disp8KITJWUMvgJsOPKII/q6eNZGbJWnZ+v3Xli0rong==}
+  /vike@0.4.179(react-streaming@0.3.41)(vite@5.3.3):
+    resolution: {integrity: sha512-Uie4cUCUa4DULy5O5s4tHvQcbySTRGpNFkIxctBY6nXB/DgkJaQVx+o/nSBcK+np43WXbAciNGt6VX/qfIoUvw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
-      react-streaming: '>=0.3.5'
+      react-streaming: '>=0.3.41'
       vite: '>=4.4.0'
     peerDependenciesMeta:
       react-streaming:
@@ -1609,21 +1609,21 @@ packages:
       '@brillout/json-serializer': 0.5.10
       '@brillout/picocolors': 1.0.13
       '@brillout/require-shim': 0.1.2
-      '@brillout/vite-plugin-server-entry': 0.4.6
-      acorn: 8.12.0
+      '@brillout/vite-plugin-server-entry': 0.4.7
+      acorn: 8.12.1
       cac: 6.7.14
       es-module-lexer: 1.5.4
       esbuild: 0.19.12
       fast-glob: 3.3.2
-      react-streaming: 0.3.33(react-dom@18.3.1)(react@18.3.1)
+      react-streaming: 0.3.41(react-dom@18.3.1)(react@18.3.1)
       semver: 7.6.2
       sirv: 2.0.4
       source-map-support: 0.5.21
-      vite: 5.3.2
+      vite: 5.3.3
     dev: false
 
-  /vite@5.3.2:
-    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
+  /vite@5.3.3:
+    resolution: {integrity: sha512-NPQdeCU0Dv2z5fu+ULotpuq5yfCS1BzKUIPhNbP3YBfAMGJXbt2nS+sbTFu+qchaqWTD+H3JK++nRwr6XIcp6A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
