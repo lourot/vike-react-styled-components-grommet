@@ -22,13 +22,13 @@ dependencies:
     version: 18.3.1(react@18.3.1)
   react-streaming:
     specifier: ^0.3.19
-    version: 0.3.41(react-dom@18.3.1)(react@18.3.1)
+    version: 0.3.42(react-dom@18.3.1)(react@18.3.1)
   styled-components:
     specifier: ^6.1.1
     version: 6.1.11(react-dom@18.3.1)(react@18.3.1)
   vike:
     specifier: ^0.4.160
-    version: 0.4.179(react-streaming@0.3.41)(vite@5.3.3)
+    version: 0.4.179(react-streaming@0.3.42)(vite@5.3.3)
   vike-react:
     specifier: ^0.4.4
     version: 0.4.17(react-dom@18.3.1)(react@18.3.1)(vike@0.4.179)(vite@5.3.3)
@@ -290,6 +290,10 @@ packages:
 
   /@brillout/json-serializer@0.5.10:
     resolution: {integrity: sha512-3bh/MS5pudu3H9l3a0KAE1RBfy/L95JWAEo8b2mPBN3H98wzCHYzgjQb9xRl58y+Kc7FgkjApgCFJV+zR06P5Q==}
+    dev: false
+
+  /@brillout/json-serializer@0.5.13:
+    resolution: {integrity: sha512-9FpmgpuoSISw6fAPVB2qwW1dGAADN28YbWpfwOErfcZxpBH4lsnejuY89qcivInnWXYJvyyPwghCuOTbtuaYFg==}
     dev: false
 
   /@brillout/picocolors@1.0.13:
@@ -1403,14 +1407,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-streaming@0.3.41(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-ALLhB32V9rjU+LjIwzDBXNuUyJRmyY6sT+yCApssXt7Azm8OxOcEq8Z5qckzWtUWHM7SK2e7dvOFiVsqnGRbxw==}
+  /react-streaming@0.3.42(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-HiJYIB9RgSB0iC7PuJLRn/a4qGo92ZkWooLdpLRbo5lRJwC9xriVTKZ8xz5EXiS/43O3wvnefrV8dS8oDtll9w==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
     dependencies:
       '@brillout/import': 0.2.3
-      '@brillout/json-serializer': 0.5.10
+      '@brillout/json-serializer': 0.5.13
       '@brillout/picocolors': 1.0.13
       isbot-fast: 1.2.0
       react: 18.3.1
@@ -1589,12 +1593,12 @@ packages:
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-streaming: 0.3.41(react-dom@18.3.1)(react@18.3.1)
-      vike: 0.4.179(react-streaming@0.3.41)(vite@5.3.3)
+      react-streaming: 0.3.42(react-dom@18.3.1)(react@18.3.1)
+      vike: 0.4.179(react-streaming@0.3.42)(vite@5.3.3)
       vite: 5.3.3
     dev: false
 
-  /vike@0.4.179(react-streaming@0.3.41)(vite@5.3.3):
+  /vike@0.4.179(react-streaming@0.3.42)(vite@5.3.3):
     resolution: {integrity: sha512-Uie4cUCUa4DULy5O5s4tHvQcbySTRGpNFkIxctBY6nXB/DgkJaQVx+o/nSBcK+np43WXbAciNGt6VX/qfIoUvw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -1615,7 +1619,7 @@ packages:
       es-module-lexer: 1.5.4
       esbuild: 0.19.12
       fast-glob: 3.3.2
-      react-streaming: 0.3.41(react-dom@18.3.1)(react@18.3.1)
+      react-streaming: 0.3.42(react-dom@18.3.1)(react@18.3.1)
       semver: 7.6.2
       sirv: 2.0.4
       source-map-support: 0.5.21
