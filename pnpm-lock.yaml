@@ -28,10 +28,10 @@ dependencies:
     version: 6.1.13(react-dom@18.3.1)(react@18.3.1)
   vike:
     specifier: ^0.4.160
-    version: 0.4.200(react-streaming@0.3.43)(vite@5.4.10)
+    version: 0.4.201(react-streaming@0.3.43)(vite@5.4.10)
   vike-react:
     specifier: ^0.5.0
-    version: 0.5.7(react-dom@18.3.1)(react@18.3.1)(vike@0.4.200)
+    version: 0.5.7(react-dom@18.3.1)(react@18.3.1)(vike@0.4.201)
 
 devDependencies:
   '@types/react':
@@ -1563,7 +1563,7 @@ packages:
       picocolors: 1.1.1
     dev: false
 
-  /vike-react@0.5.7(react-dom@18.3.1)(react@18.3.1)(vike@0.4.200):
+  /vike-react@0.5.7(react-dom@18.3.1)(react@18.3.1)(vike@0.4.201):
     resolution: {integrity: sha512-loAf5t4QmSLenjpPKzk9P3Q4lhQVltg/ze0r3k3PpF3ehBJJiOfFWvKwpCi9kvt50hNnQcZgleem5itDqN/KsA==}
     peerDependencies:
       react: '>=18.0.0'
@@ -1573,11 +1573,11 @@ packages:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-streaming: 0.3.43(react-dom@18.3.1)(react@18.3.1)
-      vike: 0.4.200(react-streaming@0.3.43)(vite@5.4.10)
+      vike: 0.4.201(react-streaming@0.3.43)(vite@5.4.10)
     dev: false
 
-  /vike@0.4.200(react-streaming@0.3.43)(vite@5.4.10):
-    resolution: {integrity: sha512-tmYs6mbnkbyxAFUrjCoKLStNq2QIJyais9FIUHME73tGBEF8/fqmj/EKpCu0KNMkcRlQ4shsd+A/cNFfWaFTvA==}
+  /vike@0.4.201(react-streaming@0.3.43)(vite@5.4.10):
+    resolution: {integrity: sha512-T8Nvx31xSS28UC3N+jEb1PMiQr5tH5oBxhdH6HQNtgzDO7Hl21yaIaoCoCBThcuZvt9G3Nu0O+49Rtu28ybMrw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
