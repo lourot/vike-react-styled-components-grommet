@@ -3,16 +3,19 @@
 
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
     commit-message:
-      prefix: 'chore: '
+      prefix: "chore: "
+    ignore:
+      # FIXME: vike-react ejection has to be made again for vike-react >= 0.4.14
+      - dependency-name: "vike-react"
 
     # Do not get one pull request per version bump. Instead get one pull request
     # bumping several dependency versions at once:
     groups:
       all-deps:
         patterns:
-          - '*'
+          - "*"
