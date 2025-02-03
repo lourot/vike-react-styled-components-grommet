@@ -28,10 +28,10 @@ dependencies:
     version: 6.1.14(react-dom@19.0.0)(react@19.0.0)
   vike:
     specifier: ^0.4.160
-    version: 0.4.219(react-streaming@0.3.47)(vite@6.0.11)
+    version: 0.4.220(react-streaming@0.3.47)(vite@6.0.11)
   vike-react:
     specifier: 0.4.13
-    version: 0.4.13(react-dom@19.0.0)(react@19.0.0)(vike@0.4.219)(vite@6.0.11)
+    version: 0.4.13(react-dom@19.0.0)(react@19.0.0)(vike@0.4.220)(vite@6.0.11)
 
 devDependencies:
   '@types/react':
@@ -526,7 +526,7 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.18.0
+      fastq: 1.19.0
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.32.0:
@@ -880,8 +880,8 @@ packages:
       micromatch: 4.0.8
     dev: false
 
-  /fastq@1.18.0:
-    resolution: {integrity: sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==}
+  /fastq@1.19.0:
+    resolution: {integrity: sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==}
     dependencies:
       reusify: 1.0.4
     dev: false
@@ -1180,8 +1180,8 @@ packages:
     hasBin: true
     dev: false
 
-  /semver@7.6.3:
-    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+  /semver@7.7.0:
+    resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
     engines: {node: '>=10'}
     hasBin: true
     dev: false
@@ -1262,7 +1262,7 @@ packages:
       picocolors: 1.1.1
     dev: false
 
-  /vike-react@0.4.13(react-dom@19.0.0)(react@19.0.0)(vike@0.4.219)(vite@6.0.11):
+  /vike-react@0.4.13(react-dom@19.0.0)(react@19.0.0)(vike@0.4.220)(vite@6.0.11):
     resolution: {integrity: sha512-IGQU7dmEAlpv3ggOcN7q3/4cYPZL5VD9h8mLWURkr4QuTS7JStp+LTJxWiX3Y90ZmLKcMD8yk5DPD5x4FEr+vg==}
     peerDependencies:
       react: '>=18.0.0'
@@ -1273,12 +1273,12 @@ packages:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       react-streaming: 0.3.47(react-dom@19.0.0)(react@19.0.0)
-      vike: 0.4.219(react-streaming@0.3.47)(vite@6.0.11)
+      vike: 0.4.220(react-streaming@0.3.47)(vite@6.0.11)
       vite: 6.0.11
     dev: false
 
-  /vike@0.4.219(react-streaming@0.3.47)(vite@6.0.11):
-    resolution: {integrity: sha512-k4IRGAI+kvkrXuriUfVbUd567+OKBWYwG7oz+Q5JP6xZmhEz2rJHmmncs71/PAbyE2D6IojHYmfGmcv1UYcOow==}
+  /vike@0.4.220(react-streaming@0.3.47)(vite@6.0.11):
+    resolution: {integrity: sha512-9gB/Kha2tnHUyJpcJWMoL86hgW8NVxZsfolbvorTWIKkNsY77VpEUgLXiFnJCGBmim2p3PZFPxqxuxT9+VRfeA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -1302,7 +1302,7 @@ packages:
       fast-glob: 3.3.3
       json5: 2.2.3
       react-streaming: 0.3.47(react-dom@19.0.0)(react@19.0.0)
-      semver: 7.6.3
+      semver: 7.7.0
       source-map-support: 0.5.21
       vite: 6.0.11
     dev: false
